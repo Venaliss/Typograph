@@ -15,6 +15,7 @@ namespace Typograph
     {
         private string fileName;
         Commands cmd = new Commands();
+        Form2 check = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -23,15 +24,34 @@ namespace Typograph
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string text = txtBoxBefore.Text;
-
-            text = cmd.punctuationsFix(text);
-            text = cmd.replacePlusMinusSymbol(text);
-            text = cmd.replaceDefisNumberRange(text);
-            text = cmd.myRuleCapitalLetter(text);
-            text = cmd.myRuleReplaceEllipsis(text);
-            text = cmd.nonSpaceBeforeDash(text);
-            text = cmd.removeExcessiveSpaces(text);
-
+            if (check.rule9.Checked == true)
+            {
+                text = cmd.replacePlusMinusSymbol(text);
+            }
+            if (check.rule1.Checked == true)
+            {
+                text = cmd.punctuationsFix(text);
+            }
+            if (check.rule2.Checked == true)
+            {
+                text = cmd.removeExcessiveSpaces(text);
+            }
+            if (check.rule16.Checked == true)
+            {
+                text = cmd.nonSpaceBeforeDash(text);
+            } 
+            if (check.rule7.Checked == true)
+            {
+                text = cmd.replaceDefisNumberRange(text);
+            }
+            if (check.myRule1.Checked == true)
+            {
+                text = cmd.myRuleCapitalLetter(text);
+            }
+            if (check.myRule2.Checked == true)
+            {
+                text = cmd.myRuleReplaceEllipsis(text);
+            }
             txtBoxAfter.Text = text;
         }
 
@@ -91,6 +111,11 @@ namespace Typograph
         private void PasteToolMenu_Click(object sender, EventArgs e)
         {
             txtBoxBefore.Paste();
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            check.Show();
         }
     }
 }

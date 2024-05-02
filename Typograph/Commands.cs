@@ -64,7 +64,7 @@ namespace Typograph
         public string punctuationsFix(string text)
         {
             string result = "";
-            string punctuationChars = ".,:;!?()[]{}<>";
+            string punctuationChars = ".,:;!?()[]{}<>/";
 
             for (int i = 0; i < text.Length; i++)
             {

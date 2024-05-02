@@ -37,12 +37,13 @@
             this.openFileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAbsurd = new System.Windows.Forms.Button();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.CutToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.CutToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAbsurd = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
-            this.toolStripSplitButton1});
+            this.toolStripSplitButton1,
+            this.settingsButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(816, 27);
@@ -122,6 +124,40 @@
             this.exitToolStrip.Text = "Выход";
             this.exitToolStrip.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CutToolMenu,
+            this.CopyToolMenu,
+            this.PasteToolMenu});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 24);
+            this.toolStripSplitButton1.Text = "Текст";
+            // 
+            // CutToolMenu
+            // 
+            this.CutToolMenu.Name = "CutToolMenu";
+            this.CutToolMenu.Size = new System.Drawing.Size(216, 26);
+            this.CutToolMenu.Text = "Вырезать";
+            this.CutToolMenu.Click += new System.EventHandler(this.CutToolMenu_Click);
+            // 
+            // CopyToolMenu
+            // 
+            this.CopyToolMenu.Name = "CopyToolMenu";
+            this.CopyToolMenu.Size = new System.Drawing.Size(216, 26);
+            this.CopyToolMenu.Text = "Копировать";
+            this.CopyToolMenu.Click += new System.EventHandler(this.CopyToolMenu_Click);
+            // 
+            // PasteToolMenu
+            // 
+            this.PasteToolMenu.Name = "PasteToolMenu";
+            this.PasteToolMenu.Size = new System.Drawing.Size(216, 26);
+            this.PasteToolMenu.Text = "Вставить";
+            this.PasteToolMenu.Click += new System.EventHandler(this.PasteToolMenu_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -145,39 +181,15 @@
             this.btnAbsurd.UseVisualStyleBackColor = false;
             this.btnAbsurd.Click += new System.EventHandler(this.btnAbsurd_Click);
             // 
-            // toolStripSplitButton1
+            // settingsButton
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CutToolMenu,
-            this.CopyToolMenu,
-            this.PasteToolMenu});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 24);
-            this.toolStripSplitButton1.Text = "Текст";
-            // 
-            // CopyToolMenu
-            // 
-            this.CopyToolMenu.Name = "CopyToolMenu";
-            this.CopyToolMenu.Size = new System.Drawing.Size(216, 26);
-            this.CopyToolMenu.Text = "Копировать";
-            this.CopyToolMenu.Click += new System.EventHandler(this.CopyToolMenu_Click);
-            // 
-            // PasteToolMenu
-            // 
-            this.PasteToolMenu.Name = "PasteToolMenu";
-            this.PasteToolMenu.Size = new System.Drawing.Size(216, 26);
-            this.PasteToolMenu.Text = "Вставить";
-            this.PasteToolMenu.Click += new System.EventHandler(this.PasteToolMenu_Click);
-            // 
-            // CutToolMenu
-            // 
-            this.CutToolMenu.Name = "CutToolMenu";
-            this.CutToolMenu.Size = new System.Drawing.Size(216, 26);
-            this.CutToolMenu.Text = "Вырезать";
-            this.CutToolMenu.Click += new System.EventHandler(this.CutToolMenu_Click);
+            this.settingsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(88, 24);
+            this.settingsButton.Text = "Настройки";
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // Form1
             // 
@@ -191,6 +203,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtBoxAfter);
             this.Controls.Add(this.txtBoxBefore);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);
@@ -216,6 +229,7 @@
         private System.Windows.Forms.ToolStripMenuItem CopyToolMenu;
         private System.Windows.Forms.ToolStripMenuItem PasteToolMenu;
         private System.Windows.Forms.ToolStripMenuItem CutToolMenu;
+        private System.Windows.Forms.ToolStripButton settingsButton;
     }
 }
 
