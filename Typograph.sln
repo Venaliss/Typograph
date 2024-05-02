@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.34031.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typograph", "Typograph\Typograph.csproj", "{C1916032-DE41-42E3-AE65-FB734C2E245D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypographUnitTests", "TypographUnitTests\TypographUnitTests.csproj", "{00F32618-8DE2-4375-9802-4E986ADB514B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C1916032-DE41-42E3-AE65-FB734C2E245D} = {C1916032-DE41-42E3-AE65-FB734C2E245D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{C1916032-DE41-42E3-AE65-FB734C2E245D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1916032-DE41-42E3-AE65-FB734C2E245D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1916032-DE41-42E3-AE65-FB734C2E245D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F32618-8DE2-4375-9802-4E986ADB514B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F32618-8DE2-4375-9802-4E986ADB514B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F32618-8DE2-4375-9802-4E986ADB514B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F32618-8DE2-4375-9802-4E986ADB514B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
